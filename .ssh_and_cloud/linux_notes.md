@@ -1,4 +1,4 @@
-# Linus Notes
+# Linux Notes
 
 `uname` = gives system info
 `uname --help` = gives system info along with options and assistance
