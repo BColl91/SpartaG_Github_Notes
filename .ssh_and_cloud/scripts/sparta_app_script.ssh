@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# update
+sudo apt update -y
+
+# upgrade (without purple screen)
+sudo NEEDRESTART_MODE=a apt-get dist-upgrade --yes
+sudo apt upgrade -y
+
+# install nginx
+sudo apt install nginx -y
+
+# restart nginx
+sudo systemctl restart nginx
+
+# enable nginx
+sudo systemctl enableq nginx
+
+# install git
+sudo apt install git
+ 
+# clone repo
+git clone https://github.com/BColl91/Sparta_app.git
+
+# install nodejs version 20.x
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+# check version
+node -v
+
+# cd into app folder
+cd app
+
+# install app 
+sudo npm install
+
+# start app
+sudo npm strt app.js
+
+echo "Deployment complete!"
