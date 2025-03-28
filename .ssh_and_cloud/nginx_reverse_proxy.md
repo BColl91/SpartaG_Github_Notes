@@ -1,36 +1,36 @@
-# Revers Proxy Notes
+# Reverse Proxy Notes
 
 
 #### What is a reverse proxy? Why implement one?
 It is a server that sits between client devices (like web browsers) and a web server, forwarding requests from clients to the appropriate backend server. Essentially, it reverses the typical flow seen in a regular proxy server.
 
 The reasons to implement a reverse proxy include:-
-- *Load Balancing*: It can distribute incoming requests across multiple servers which prevents a single server form being overwhelmed.
-- *Security*: It adds an extra layer of security by preventing direct access to abckend servers.
-- *Caching*: It can cache responses from backend servers.(further reducing load on servers and also improving response times)
-- *SSL Termination*: The reverse proxy can handle SSL/TLS encryption and decryption, offloading this task from the backend servers.
-- *Centralised Authentication*: It can centralize user authentication and authorization, ensuring that only authenticated and authorized users can access certain resources. ***reword***
+- **Load Balancing**: It can distribute incoming requests across multiple servers which prevents a single server form being overwhelmed.
+- **Security**: It adds an extra layer of security by preventing direct access to abckend servers.
+- **Caching**: It can cache responses from backend servers.(further reducing load on servers and also improving response times)
+- **SSL Termination**: The reverse proxy can handle SSL/TLS encryption and decryption, offloading this task from the backend servers.
+- **Centralised Authentication**: It can centralize user authentication and authorization, ensuring that only authenticated and authorized users can access certain resources. reword
 - *Compression and Optimisation*: It can compress data and perform other optimisations which improves performance.
 
 
 #### How are they different to a forward proxy?
 A forward proxy and a reverse proxy perform opposite roles in the network:
-    A forward proxy is used by the client to access external sources (the internet). This hides the clients identidy and can be used to filter content, enforce policies, or bypass geo-blocking.
+-  A forward proxy is used by the client to access external sources (the internet). This hides the clients identidy and can be used to filter content, enforce policies, or bypass geo-blocking.
 
-    Whereas a reverse proxy stands between the client and a server or a group of servers.The client does not know which backend server is handling the request.
+- Whereas a reverse proxy stands between the client and a server or a group of servers.The client does not know which backend server is handling the request.
 
 #### How do they work?
 Here’s how a reverse proxy works in a typical web setup:
 
-    Client Request: A user sends a request.
+1. **Client Request**: A user sends a request.
 
-    Reverse Proxy: The request first hits the reverse proxy server. The reverse proxy will then determine which backend server is most appropriate to handle the request (this can be based on load balancing algorithms, such as round-robin or least connections).
+2. **Reverse Proxy**: The request first hits the reverse proxy server. The reverse proxy will then determine which backend server is most appropriate to handle the request (this can be based on load balancing algorithms, such as round-robin or least connections).
 
-    Forward to Backend Server: The reverse proxy forwards the request to the selected backend server. The backend server processes the request, such as fetching data from a database or serving a web page.
+3. **Forward to Backend Server**: The reverse proxy forwards the request to the selected backend server. The backend server processes the request, such as fetching data from a database or serving a web page.
 
-    Backend Response: The backend server sends its response (like HTML, images, or data) back to the reverse proxy.
+4. **Backend Response**: The backend server sends its response (like HTML, images, or data) back to the reverse proxy.
 
-    Return to Client: The reverse proxy sends the response back to the client, making it appear as if the reverse proxy itself is serving the content.
+5. **Return to Client**: The reverse proxy sends the response back to the client, making it appear as if the reverse proxy itself is serving the content.
 
 This whole process ensures that the client never communicates directly with the backend servers.
 
@@ -58,3 +58,5 @@ Add commands to automate the config change
 You will need to use the `sed` command
 
 Please write up the steps of how to implement the reverse proxy in the same file as you research
+
+##  How to Automate the implementation of a reverse proxy 
