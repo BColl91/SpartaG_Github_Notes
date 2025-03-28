@@ -9,8 +9,8 @@ The reasons to implement a reverse proxy include:-
 - **Security**: It adds an extra layer of security by preventing direct access to abckend servers.
 - **Caching**: It can cache responses from backend servers.(further reducing load on servers and also improving response times)
 - **SSL Termination**: The reverse proxy can handle SSL/TLS encryption and decryption, offloading this task from the backend servers.
-- **Centralised Authentication**: It can centralize user authentication and authorization, ensuring that only authenticated and authorized users can access certain resources. reword
-- *Compression and Optimisation*: It can compress data and perform other optimisations which improves performance.
+- **Centralised Authentication**: It can centralize user authentication and authorisation, ensuring that only authenticated and authorised users can access certain resources.
+- **Compression and Optimisation**: It can compress data and perform other optimisations which improves performance.
 
 
 #### How are they different to a forward proxy?
