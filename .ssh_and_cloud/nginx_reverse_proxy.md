@@ -39,38 +39,36 @@ This whole process ensures that the client never communicates directly with the 
 <br>
 <br>
 
-## How tomanually implement a reverse proxy for the Sparta app
+## How to manually implement a reverse proxy for the Sparta app
 
+- launch terminal in aws
+  - grab connection link
+- open git bash
+    - cd ~
+    - cd .ssh
+    - paste connection link
+    - nano provision.sh
+      - write in/paste script, save and close
+    -  chmod +x provision.sh
+    -  source provisions.sh
+- cd ~
+- cd /etc/nginx
+- ls
+- cd site-available
+- ls
+- nano default
+  - locate the location block and edit. (see example below)
+ 
+ ![Location_block_eg](../images/location_block.png)
 
->launch terminal in aws
->grab connection link
->open git bash
-> cd ~
-> cd .ssh
-> paste connection link
-> nano provision.sh
-> chmod +x provision.sh
-> source provisions.sh
-> cd ~
-> cd /etc/nginx
-> ls
-> cd site-available
-> ls
-> nano default
-> change location block to https://localhost:3000/
-> save and close
-> cd ~
-> sudo nano default
->sudo systemctl restart nginx
->put ip address into url to test app
+  - save and close
+- cd ~
+- sudo nano default
+- sudo systemctl restart nginx
+- put ip address into url to test app
 
-
-
-
-Add commands to automate the config change
+--------
 
 You will need to use the `sed` command
-
-Please write up the steps of how to implement the reverse proxy in the same file as you research
 
 ##  How to Automate the implementation of a reverse proxy 
