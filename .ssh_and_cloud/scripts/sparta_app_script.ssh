@@ -10,7 +10,7 @@ sudo NEEDRESTART_MODE=a apt-get dist-upgrade --yes
 sudo apt install nginx -y
 
 # enable nginx
-sudo systemctl enableq nginx
+sudo systemctl enable nginx
 
 # install git
 # sudo apt install git

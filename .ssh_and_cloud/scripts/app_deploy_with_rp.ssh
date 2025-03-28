@@ -10,29 +10,38 @@ sudo NEEDRESTART_MODE=a apt-get dist-upgrade --yes
 sudo apt install nginx -y
 
 # enable nginx
-sudo systemctl enableq nginx
+sudo systemctl enable nginx
 
-# install git
-# sudo apt install git
- 
-# clone repo
-git clone https://github.com/BColl91/Sparta_app.git
+# Navigate to file
+cd /etc/nginx/sites-available
 
-# install nodejs version 20.x
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+sudo nano default
 
-# check version
-node -v
 
-# cd into app folder
-cd nodejs-sparta-test-app
-cd app
+# set up proxy_pass
+sudo nano /etc/nginx/sites-available/default
 
-# install app 
-sudo npm install
+# example nginx reverse proxy mapping
+# /etc/nginx/sites-available/default
+ location / {
+   proxy_pass http://54.195.158.223:3000/;
+ }
 
-# start app
-sudo npm strt app.js
+# example nginx reverse proxy config file
+# /etc/nginx/sites-available/default
+# location /examples {
+#  proxy_pass http://54.195.158.223:3000/examples;
+#  proxy_buffering off;
+#  proxy_set_header X-Real-IP $remote_addr;
+#  proxy_set_header X-Forwarded-Host $host;
+#  proxy_set_header X-Forwarded-Port $server_port;
+#}
 
-echo "Deployment complete!"
+# test
+sudo nginx -t
+
+# restart nginx
+sudo systemctl restart nginx
+
+# check status
+sudo systemctl status nginx
