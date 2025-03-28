@@ -3,21 +3,17 @@
 # update
 sudo apt update -y
 
-# upgrade (without purple screen)
+# upgrade
 sudo NEEDRESTART_MODE=a apt-get dist-upgrade --yes
-sudo apt upgrade -y
 
 # install nginx
 sudo apt install nginx -y
-
-# restart nginx
-sudo systemctl restart nginx
 
 # enable nginx
 sudo systemctl enableq nginx
 
 # install git
-sudo apt install git
+# sudo apt install git
  
 # clone repo
 git clone https://github.com/BColl91/Sparta_app.git
@@ -30,6 +26,7 @@ sudo apt-get install -y nodejs
 node -v
 
 # cd into app folder
+cd nodejs-sparta-test-app
 cd app
 
 # install app 
