@@ -21,21 +21,9 @@ sudo nano default
 # set up proxy_pass
 sudo nano /etc/nginx/sites-available/default
 
-# example nginx reverse proxy mapping
-# /etc/nginx/sites-available/default
- location / {
-   proxy_pass http://54.195.158.223:3000/;
- }
-
-# example nginx reverse proxy config file
-# /etc/nginx/sites-available/default
-# location /examples {
-#  proxy_pass http://54.195.158.223:3000/examples;
-#  proxy_buffering off;
-#  proxy_set_header X-Real-IP $remote_addr;
-#  proxy_set_header X-Forwarded-Host $host;
-#  proxy_set_header X-Forwarded-Port $server_port;
-#}
+location /examples {
+ proxy_pass http://localhost:3000/;
+}
 
 # test
 sudo nginx -t
@@ -45,3 +33,8 @@ sudo systemctl restart nginx
 
 # check status
 sudo systemctl status nginx
+
+
+# install npm
+
+#run npm

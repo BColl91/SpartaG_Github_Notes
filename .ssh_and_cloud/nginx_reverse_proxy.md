@@ -39,19 +39,33 @@ This whole process ensures that the client never communicates directly with the 
 <br>
 <br>
 
-## Manually implement a reverse proxy for the Sparta app (app should run on IP address only). add link to chat
+## How tomanually implement a reverse proxy for the Sparta app
 
 
-You will need to change the nginx configuration
+>launch terminal in aws
+>grab connection link
+>open git bash
+> cd ~
+> cd .ssh
+> paste connection link
+> nano provision.sh
+> chmod +x provision.sh
+> source provisions.sh
+> cd ~
+> cd /etc/nginx
+> ls
+> cd site-available
+> ls
+> nano default
+> change location block to https://localhost:3000/
+> save and close
+> cd ~
+> sudo nano default
+>sudo systemctl restart nginx
+>put ip address into url to test app
 
-Instead of making a new location (e.g. location/examples) change the default location (i.e. location /)
-
-Do not worry about setting nginx proxy header values
-
-How can you make the new configuration take effect?
 
 
-##  Automate the implementation of a reverse proxy in a new app deployment script (e.g. app_deploy_with_rp.sh)
 
 Add commands to automate the config change
 
