@@ -9,23 +9,11 @@ sudo NEEDRESTART_MODE=a apt-get dist-upgrade --yes
 # install nginx
 sudo apt install nginx -y
 
-sudo sed -i '51c\proxy_pass http://127.0.0.1:3000;' /etc/nginx/sites-available/default
+# Edit the default file for reverse proxy
+sudo sed -i '51c\proxy_pass http://localhost:3000;' /etc/nginx/sites-available/default
 
 # enable nginx
 sudo systemctl enable nginx
-
-# Navigate to file
-cd /etc/nginx/sites-available
-
-# Edit the default file for reverse proxy
-sudo nano default
-
-# set up proxy_pass
-sudo nano /etc/nginx/sites-available/default
-
-location /examples {
- proxy_pass http://localhost:3000/;
-}
 
 # test
 sudo nginx -t
@@ -36,7 +24,32 @@ sudo systemctl restart nginx
 # check status
 sudo systemctl status nginx
 
+# Install git
+sudo apt install got -y
 
-# install npm
+# clone repo
+git clone https://github.com/BColl91/Sparta_app.git
 
-#run npm
+# install nodejs version 20.x
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+# check version
+node -v
+
+# cd into app folder
+cd ./Sparta_app/app
+
+# install app 
+sudo npm install
+
+# install pm2 - process manager package for nodejs apps
+sudo DEBIAN_FRONTEND=noninteractive npm install pm2 -g
+ 
+# kill any running node processes that could interfere
+pm2 kill
+ 
+# run the app with pm2
+pm2 start app.js
+
+echo "Deployment complete!"
