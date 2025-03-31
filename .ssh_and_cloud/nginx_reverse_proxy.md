@@ -6,10 +6,10 @@ It is a server that sits between client devices (like web browsers) and a web se
 
 The reasons to implement a reverse proxy include:-
 - **Load Balancing**: It can distribute incoming requests across multiple servers which prevents a single server form being overwhelmed.
-- **Security**: It adds an extra layer of security by preventing direct access to abckend servers.
+- **Security**: It adds an extra layer of security by preventing direct access to backend servers.
 - **Caching**: It can cache responses from backend servers.(further reducing load on servers and also improving response times)
 - **SSL Termination**: The reverse proxy can handle SSL/TLS encryption and decryption, offloading this task from the backend servers.
-- **Centralised Authentication**: It can centralize user authentication and authorisation, ensuring that only authenticated and authorised users can access certain resources.
+- **Centralised Authentication**: It can centralise user authentication and authorisation, ensuring that only authenticated and authorised users can access certain resources.
 - **Compression and Optimisation**: It can compress data and perform other optimisations which improves performance.
 
 
@@ -63,7 +63,6 @@ This whole process ensures that the client never communicates directly with the 
 
   - save and close
 - cd ~
-- sudo nano default
 - sudo systemctl restart nginx
 - put ip address into url to test app
 
