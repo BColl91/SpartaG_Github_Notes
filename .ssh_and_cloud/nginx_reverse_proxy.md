@@ -68,6 +68,6 @@ This whole process ensures that the client never communicates directly with the 
 
 --------
 
-You will need to use the `sed` command
-
 ##  How to Automate the implementation of a reverse proxy 
+
+[Automated script](https://github.com/BColl91/SpartaG_Github_Notes/blob/main/.ssh_and_cloud/scripts/app_deploy_with_rp.ssh)
