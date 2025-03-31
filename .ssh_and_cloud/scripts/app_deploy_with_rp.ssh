@@ -9,14 +9,16 @@ sudo NEEDRESTART_MODE=a apt-get dist-upgrade --yes
 # install nginx
 sudo apt install nginx -y
 
+sudo sed -i '51c\proxy_pass http://127.0.0.1:3000;' /etc/nginx/sites-available/default
+
 # enable nginx
 sudo systemctl enable nginx
 
 # Navigate to file
 cd /etc/nginx/sites-available
 
+# Edit the default file for reverse proxy
 sudo nano default
-
 
 # set up proxy_pass
 sudo nano /etc/nginx/sites-available/default
