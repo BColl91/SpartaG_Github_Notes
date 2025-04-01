@@ -14,7 +14,7 @@ Connect to your AWS instance:
 
 - `ssh -i your-key.pem ubuntu@<your-instance-ip>`
 
--  Update and Install MongoDB
+**Update and Install MongoDB**
 
 Update package lists:
 
