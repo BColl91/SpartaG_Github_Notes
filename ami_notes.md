@@ -54,7 +54,7 @@ ________________
         ○ On the EC2 dashboard, right-click the instance.
         ○ Select Create Image.
         ○ AWS will snapshot the server, including all files and configurations.
-Save the Image: Your image will be saved, and you can use it to launch new instances
+Save the Image: Your image will be saved, and you can use it to launch new instances. Make sure you terminate your previous instance!
 
 <br>
 
@@ -64,4 +64,5 @@ Save the Image: Your image will be saved, and you can use it to launch new insta
     • Launch from an Image:
         1. In your cloud platform, navigate to the AMI section.
         2. Select your saved image and choose to launch a new instance based on it.
+        3. When copying and pasting the url. ensure the details are correct and the user matches the one in the image (i.e- ubuntu)
 The new instance will inherit all configurations, software, and settings from the image.

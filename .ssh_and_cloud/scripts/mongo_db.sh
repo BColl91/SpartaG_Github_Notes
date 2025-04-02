@@ -20,7 +20,7 @@ sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 sudo apt update -y
 
 # install mongodb
-sudo apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
 
 # change mongoDB config to allow external connections
 sudo sed -i '21c\  bindIp: 0.0.0.0' /etc/mongod.conf
@@ -42,5 +42,8 @@ sudo systemctl enable mongod
 #    echo "export DB_HOST=mongodb://0.0.0.0:27017/posts" | sudo tee -a /etc/environment
 #    export DB_HOST=mongodb://0.0.0.0:27017/posts
 #   sudo npm install
+# ### sudo DEBIAN_FRONTEND=noninteractive apt install nodejs -y
 #   node seeds/seed.js
+# sudo DEBIAN_FRONTEND=noninteractive npm install pm2 -g
+# pm2 kill
 #    pm2 start app.js

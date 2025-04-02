@@ -30,19 +30,19 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\sudo apt-ge
 node -v
 
 # cd into cloned directory
-cd sparta-app
+cd Sparta_app
 
 # cd into app
 cd app
 
 # create environment variable for mongoDB - can make it persistent by adding to .bashrc file
-export DB_HOST=mongodb://<db-ip-address>:27017/posts
+# export DB_HOST=mongodb://<db-ip-address>:27017/posts
 
 # install dependencies
 sudo npm install
 
 # seed the database
-node seeds/seed.js
+# node seeds/seed.js
 
 # install pm2 - process manager package for nodejs apps
 sudo npm install pm2 -g
@@ -51,7 +51,7 @@ sudo npm install pm2 -g
 pm2 kill
 
 # run the app with pm2
-pm2 start app.js
+# pm2 start app.js
 
 # runs the app after instance is restarted
 sudo pm2 startup
