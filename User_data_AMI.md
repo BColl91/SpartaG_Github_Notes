@@ -5,7 +5,7 @@ CloudWatch Dashboards give you a customizable, unified view of your AWS resource
 **Create an Instance**
 
 - Launch an instance as normal and provide an appropiate name.
-- Below that select 'My AMIs', 'pwned by me' and use the drop down box to locate your AMI.
+- Below that select 'My AMIs', 'owned by me' and use the drop down box to locate your AMI.
 - Ensure that you have the right key and security group.
 
 ![screenshot1](./images/Monitoring/m1.png)
@@ -122,3 +122,9 @@ This is your dashboard! You can change how often it refreshes along the top righ
 ![screenshot15](./images/Monitoring/m15.png)
 
 ![screenshot16](./images/Monitoring/m16.png)
+
+Here is an example of a working dashboard and alarm:-
+
+![dashboard and alarm](./images/Monitoring/dsahboard.png)
+![dashboard and alarm](./images/Monitoring/alarm.png)
+![dashboard and alarm](./images/Monitoring/email.png)
