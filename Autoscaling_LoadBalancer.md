@@ -27,7 +27,7 @@ A load balancer sits between the users and the servers. When a user sends a requ
 <br>
 <br>
 
-- Create an instance and an AMI template. Please see [Instance Guide]() and [AMI Guide]() before continuing.
+- Create an instance and an AMI template. Please see [AMI Guide](https://github.com/BColl91/SpartaG_Github_Notes/blob/main/ami_notes.md) before continuing.
   
 - On your dashboard, along the left, go to Instances and select Launch Templates
   
