@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Update system packages
+# Update and upgrade system packages
 sudo apt update -y && sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
 # https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
@@ -41,7 +41,8 @@ sudo systemctl enable mongod
 # Set DB_HOST environment variable and persist in .bashrc
 #    echo "export DB_HOST=mongodb://0.0.0.0:27017/posts" | sudo tee -a /etc/environment
 #    export DB_HOST=mongodb://0.0.0.0:27017/posts
-#   sudo npm install
+# cd into your repo, then your app
+#   sudo DEBIAN_FRONTEND=noninteractive apt install npm -y
 # ### sudo DEBIAN_FRONTEND=noninteractive apt install nodejs -y
 #   node seeds/seed.js
 # sudo DEBIAN_FRONTEND=noninteractive npm install pm2 -g
