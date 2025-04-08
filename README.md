@@ -46,8 +46,3 @@ This README contains a quick reference guide for common Git and GitHub commands,
 ## Other Notes
 - Forking a repository on GitHub creates a copy of someone else's repository under your GitHub account.
 - After pushing your changes to a new branch on GitHub, you can create a pull request to propose your changes to the original repository.
-<br>
-<br>
-<br>
-<br>
-![alt-img external](https://cdn.pixabay.com/photo/2017/05/31/21/58/owl-2361801_1280.jpg)
