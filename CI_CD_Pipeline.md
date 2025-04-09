@@ -98,8 +98,35 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 - click *save*
 
 ![Jenkins SG](./images/CICD/step8.png)
+<br>
+<br>
+
+- To check if it is successfull, go to your dashboard and select *last success* to bring the latest projects to the top.
+- You can also select your first project to check the details and confirm.
+
+![Jenkins SG](./images/CICD/Step9.png)
+<br>
+<br>
+
+  -----
+
+  ### Creating an ssh key-pair
+
+  - Open git bash
+  - Navigate to your .ssh folder
+  - Locate the login key from your document as appropiate. **A/N: TO CLARIFY LOCATION KEY WITH TRAINER**
+  - Change the email address to your own.
+![Jenkins SG](./images/)
+
+-This will generate a public/private key pair.
+- label as appropiate (*e.g:- tech503-rebecca-github-key-jenkins*)
+- Keep the passphrase empty by pressing enter.
+- to check if this has worked. Type in the command `ls`
+
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
+![Jenkins SG](./images/)
+
 
 - Continue repeating the same as before until you reach *GitHub*
