@@ -39,7 +39,7 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 <br>
 <br>
 
-- From the laft hand side select *New Item* and name your new project as appropiate. (*e.g:- rebecca-first-project*)
+- From the left hand side select *New Item* and name your new project as appropiate. (*e.g:- rebecca-first-project*)
 - Select *Freestyle Project* and click ok to continue.
 
 ![Jenkins SG](./images/CICD/step1.png)
@@ -66,9 +66,35 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 <br>
 <br>
 
--
+- Along the left hand side select *build now*. This should start the project.
+- You can see the progress below build history. To see more details, hover the curse over the number, click on the dropdown box and select *Console Output*
 
+![Jenkins SG](./images/CICD/step5.png)
+![Jenkins SG](./images/CICD/Console_Output.png)
+<br>
+<br>
+
+### Creating a Pipeline
+
+- Select *New Item* from the left hand side and start creating a new project.
+- Continue creating your second project in the same manner as before and when complete, run *build now* to test it.
+- Go to *Dashboard* and select your first project.
+
+![Jenkins SG](./images/CICD/step6.png)
+<br>
+<br>
+
+- Select *Configure*
+
+![Jenkins SG](./images/CICD/step7.png)
+<br>
+<br>
+
+- 
+
+![Jenkins SG](./images/CICD/step8.png)
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
-![Jenkins SG](./images/)
+
+- Continue repeating the same as before until you reach *GitHub*
