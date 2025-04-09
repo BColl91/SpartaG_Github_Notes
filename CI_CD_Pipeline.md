@@ -34,7 +34,10 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 
 # Setting up a CI/CD Pipeline with Jenkins
 
-- To get started you will first need to register/login to Jenkins. It should then take you to a dashboard similar to the screenshit below:#
+- To get started you will first need to register/login to Jenkins. It should then take you to a dashboard similar to the screenshot below:
+
+*Note:- for this case you might need to put your instance ip address in the url then <:8080>*
+
 ![Jenkins SG](./images/CICD/dashboard.png)
 <br>
 <br>
@@ -114,7 +117,10 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 
   - Open git bash
   - Navigate to your .ssh folder
-  - Locate the login key from your document as appropiate. **A/N: TO CLARIFY LOCATION KEY WITH TRAINER**
+ - Label the title of your key as appropiate and type in the following command:
+  - ```
+    ssh-keygen -t rsa -b 4096 -C "placeholder@email.com"
+    ```
   - Change the email address to your own.
 ![Jenkins SG](./images/CICD/step10.png)
 
@@ -122,6 +128,7 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 - label as appropiate (*e.g:- tech503-rebecca-github-key-jenkins*)
 - Keep the passphrase empty by pressing enter.
 - to check if this has worked. Type in the command `ls`
+- You can locate your key in git bash using `cat <git-bash-key-name>` which will show you the relevent key.
 - Go to github and to the repo you wish to use.
 - Go to your repo settings.
 ![Jenkins SG](./images/CICD/step11.png)
@@ -133,20 +140,52 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 ![Jenkins SG](./images/CICD/step12.png)
 <br>
 <br>
-- Label the title of your key as appropiate and type in the following command:
-  - ```
-    ssh-keygen -t rsa -b 4096 -C "placeholder@email.com"
-    ```
 
--You can locate your key in git bash using `cat <git-bash-key-name>` which will show you the relevent key.
--click *add key*
--type in your password ot confirm.
+- click *add key*
+- type in your password to confirm.
+> ⚠️**Please Note** You can only use one key per repo! ⚠️
+> 
 ![Jenkins SG](./images/CICD/step13.png)
 <br>
 <br>
 
+- Go to Jenkins and create a new project.
+- Continue as previously done until you reach *GitHub Project*. Select it.
+- In *Project url* put in your repo url (*you can use the url displayed from the site page*)
+
+![Jenkins SG](./images/CICD/step14.png)
+![Jenkins SG](./images/CICD/step15.png)
+<br>
+<br>
+
+- Scroll down to *Source Code Management* and select *Git*
+- In *Repository URL* paste in the **ssh url from your repository** as shown in the below screenshot.
+![Jenkins SG](./images/CICD/Step16.png)
+<br>
+<br>
+
+- Select *Add Credentials* and change the Kind to *SSH Username with private key*
+
+![Jenkins SG](./images/CICD/step17.png)
+<br>
+<br>
+
+- Label your *ID, Description and Username* as appropiate.
+
+![Jenkins SG](./images/CICD/step18.png)
+<br>
+<br>
+
+- Scroll to Private Key and select *Enter directly*
+- Paste in the **private key** from your git bash terminal into the input box ash shown below.
+
+![Jenkins SG](./images/CICD/step19.png)
+<br>
+<br>
+
+-
 
 ![Jenkins SG](./images/)
-
-
-- Continue repeating the same as before until you reach *GitHub*
+![Jenkins SG](./images/)
+![Jenkins SG](./images/)
+![Jenkins SG](./images/)
