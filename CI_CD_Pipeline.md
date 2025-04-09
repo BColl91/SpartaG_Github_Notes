@@ -215,7 +215,7 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 ```
 ls
 cd app
-npm iinstall
+npm install
 npm test
 ```
 
@@ -224,14 +224,49 @@ npm test
 <br>
 
 - Click save to continue.
-- 
+- Run *Build Now* to test your project.
+-------
 
-![Jenkins SG](./images/)
+### Creating a webhook
+
+- Go to your repo *settings* in github.
+- select *webhooks*
+-  Select *Add webhook*
+-  Put into the url input the **relative ip address, port and name of your project** (*e.g:- http://<ip-address>:8080/github-webhook/*)
+-  (This step is for training purposes) In SSL verification select **Disable**
+-  Select *Add Webhook* to confirm.
+
+![Jenkins SG](./images/CICD/webhook_git.png)
+![Jenkins SG](./images/CICD/webhook_git_conf.png)
 <br>
 <br>
 
--
+- Open your code in Visual Studio Code, open the terminal (check that it is in git bash) and cd to the project file if nessecary.
+- You can use `git status` to see if you are in the right file and if it is up to date.
+![Jenkins SG](./images/CICD/step25.png)
+<br>
+<br>
 
-![Jenkins SG](./images/)
-![Jenkins SG](./images/)
-![Jenkins SG](./images/)
+- Put in the following command:
+  ```
+  git checkout -b dev
+  ```
+- Add a small note in your code to save a commit and put in the following commands:
+```
+git status
+```
+```
+git add .
+```
+```
+git commit -m"webhook test"
+```
+```
+git push -u origin dev
+```
+
+![Jenkins SG](./images/CICD/step26.png)
+
+- Your repository will now show a notification that there is a new branch called 'Dev'.
+- In Jenkins the build trigger will appear and will also show *GitHub Hook Log* and *GitHub* along the left hand side
+![Jenkins SG](./images/CICD/step27.png)
