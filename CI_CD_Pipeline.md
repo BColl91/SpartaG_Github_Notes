@@ -60,6 +60,14 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 -Scroll down to Build Steps and select *Add Build Step*.
 -In the drowpdown list, select *ssh* and add your command/script to the input box.
 
+![Jenkins SG](./images/CICD/step4.png)
+![Jenkins SG](./images/CICD/step4.2.png)
+<br>
+<br>
+
+-
+
+![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
