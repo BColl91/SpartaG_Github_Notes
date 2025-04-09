@@ -116,7 +116,7 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
   - Navigate to your .ssh folder
   - Locate the login key from your document as appropiate. **A/N: TO CLARIFY LOCATION KEY WITH TRAINER**
   - Change the email address to your own.
-![Jenkins SG](./images/)
+![Jenkins SG](./images/CICD/step10.png)
 
 -This will generate a public/private key pair.
 - label as appropiate (*e.g:- tech503-rebecca-github-key-jenkins*)
@@ -133,8 +133,19 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 ![Jenkins SG](./images/CICD/step12.png)
 <br>
 <br>
+- Label the title of your key as appropiate and type in the following command:
+  - ```
+    ssh-keygen -t rsa -b 4096 -C "placeholder@email.com"
+    ```
 
-![Jenkins SG](./images/)
+-You can locate your key in git bash using `cat <git-bash-key-name>` which will show you the relevent key.
+-click *add key*
+-type in your password ot confirm.
+![Jenkins SG](./images/CICD/step13.png)
+<br>
+<br>
+
+
 ![Jenkins SG](./images/)
 
 
