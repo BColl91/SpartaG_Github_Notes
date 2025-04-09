@@ -90,7 +90,12 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 <br>
 <br>
 
-- 
+- Scroll fown to Post Build Actions and select *Add post-build action*
+- in the drop-down box select *Build other projects*
+- A new feild will appear. Type in the name of the project you wish to connect to.
+- Select as desired from the drop-down box
+- Select *Trigger only if build is stable*
+- click *save*
 
 ![Jenkins SG](./images/CICD/step8.png)
 ![Jenkins SG](./images/)
