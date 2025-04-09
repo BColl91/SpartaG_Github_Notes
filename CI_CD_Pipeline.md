@@ -122,9 +122,18 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 - label as appropiate (*e.g:- tech503-rebecca-github-key-jenkins*)
 - Keep the passphrase empty by pressing enter.
 - to check if this has worked. Type in the command `ls`
+- Go to github and to the repo you wish to use.
+- Go to your repo settings.
+![Jenkins SG](./images/CICD/step11.png)
+<br>
+<br>
 
-![Jenkins SG](./images/)
-![Jenkins SG](./images/)
+- Select *Deploy Keys*
+
+![Jenkins SG](./images/CICD/step12.png)
+<br>
+<br>
+
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
 
