@@ -143,7 +143,7 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 
 - click *add key*
 - type in your password to confirm.
-> ⚠️**Please Note** You can only use one key per repo! ⚠️
+> ⚠️**PLEASE NOTE** You can only use one key per repo! ⚠️
 > 
 ![Jenkins SG](./images/CICD/step13.png)
 <br>
@@ -183,9 +183,55 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
 <br>
 <br>
 
--
+- Click *add* then select your labeled key from the drop-down list.
+
+![Jenkins SG](./images/CICD/step20.png)
+<br>
+<br>
+
+- Change Branch Specifier to `*/main`
+
+![Jenkins SG](./images/CICD/step21.png)
+<br>
+<br>
+
+- Scroll down and select *Add Build Step*
+- Select *Execute shell* from the drop-down box and type in 'ls' in the command box to check if it is connected to your github repo.
+- Select *save* to continue then select *Build Now* to see if it is running.
+
+![Jenkins SG](./images/CICD/step22.png)
+<br>
+<br>
+
+- Go to your projects *Console Output* them select *Configure*
+- Scroll to Build Enviroment and select *Provide Node & npm bin/folder to PATH*
+- Change NodeJS version to **20**
+
+![Jenkins SG](./images/CICD/step23.png)
+<br>
+<br>
+
+- In Build Steps, type the following into the command box:-
+```
+ls
+cd app
+npm iinstall
+npm test
+```
+
+![Jenkins SG](./images/CICD/step24.png)
+<br>
+<br>
+
+- Click save to continue.
+- 
 
 ![Jenkins SG](./images/)
+<br>
+<br>
+
+-
+
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
 ![Jenkins SG](./images/)
