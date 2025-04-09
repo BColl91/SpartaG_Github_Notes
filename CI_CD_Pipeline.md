@@ -7,6 +7,8 @@
 - **Continuous Delivery/Deployment (CD)**: This means that after the code is tested (via CI), it is automatically prepared and delivered (or deployed) to the production environment without manual intervention. Continuous Deployment goes one step further, deploying the code automatically without any manual review, while Continuous Delivery might have a manual review step before going live.
 
 **CI/CD pipeline** is a series of steps that automates the process of testing, building, and deploying your application. The goal is to speed up software development by automating repetitive tasks like testing, integration, and deployment.
+
+![Jenkins SG](./images/CICD/Jenkins.png)
 --------
 
 ## Jenkins
@@ -26,7 +28,38 @@ Imagine you’re a developer, and you’ve just written some code. Jenkins can a
     Test your code: After building the code, Jenkins can run tests (like checking if your app works as expected) to make sure you didn't break anything with the new code.
 
     Deploy your code: If everything goes well (the build and tests pass), Jenkins can automatically deploy your code to a live server or a staging server where users can try it out.
+
+![Jenkins SG](./images/CICD/cicd_flow.png)
 -------
 
 # Setting up a CI/CD Pipeline with Jenkins
 
+-To get started you will first need to register/login to Jenkins. It should then take you to a dashboard similar to the screenshit below:#
+![Jenkins SG](./images/CICD/dashboard.png)
+<br>
+<br>
+
+-From the laft hand side select *New Item* and name your new project as appropiate. (*e.g:- rebecca-first-project*)
+-Select *Freestyle Project* and click ok to continue.
+
+![Jenkins SG](./images/CICD/step1.png)
+<br>
+<br>
+
+-Write an imformative description to explain what the job/project entails.
+
+![Jenkins SG](./images/CICD/step2.png)
+<br>
+<br>
+
+-Select "Discard old builds* and in *Max # of build to keep* put in 3.
+![Jenkins SG](./images/CICD/step3.png)
+<br>
+<br>
+
+-Scroll down to Build Steps and select *Add Build Step*.
+-In the drowpdown list, select *ssh* and add your command/script to the input box.
+
+![Jenkins SG](./images/)
+![Jenkins SG](./images/)
+![Jenkins SG](./images/)
